@@ -1,28 +1,32 @@
 <style id="theme-color">
 :root {
-  /* background "60%" opacity */
   --theme-color-rgba: rgba(218, 218, 218, 0.2);
-
-  /* figma drop shadow */
   --theme-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.25);
-
-  /* glass blur amount */
   --theme-backdrop-blur: 10px;
 }
 
-.navbar,
-.jumbotron{
+.navbar {
   background-color: var(--theme-color-rgba) !important;
   box-shadow: var(--theme-shadow) !important;
-
-  /* glass effect */
   -webkit-backdrop-filter: blur(var(--theme-backdrop-blur));
   backdrop-filter: blur(var(--theme-backdrop-blur));
 }
 
-/* optional: biar edge lebih rapi */
-.navbar,
-.jumbotron{
-  border: 1px solid rgba(255,255,255,0.12);
+.jumbotron,
+.jumbotron.bg-primary,
+body .jumbotron,
+body main[role="main"] div.jumbotron {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #ADBDDD !important;
+  -webkit-backdrop-filter: blur(var(--theme-backdrop-blur));
+  backdrop-filter: blur(var(--theme-backdrop-blur));
+}
+
+.jumbotron h1,
+.jumbotron p,
+.jumbotron .lead,
+.jumbotron span {
+  color: #ADBDDD !important;
 }
 </style>
